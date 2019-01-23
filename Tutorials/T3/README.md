@@ -66,7 +66,8 @@ public void add(int d, int c){...}
 public int remove(int c){...}
  // removes c cents from the current amount of money, 
  // if there is enough money to remove c cents.
- // Otherwise, removes as much as it can
+ // Otherwise, removes as much as it can.
+ // Returns the amount actually removed.
  // Note: the input will satisfy c >= 0 (and it may be > 100).
 ```
 
