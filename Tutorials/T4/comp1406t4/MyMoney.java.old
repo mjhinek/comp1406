@@ -1,0 +1,42 @@
+package comp1406t4;
+
+
+public class MyMoney extends Money{
+
+	private String name;
+	
+  public MyMoney(String name){
+		this.name = name;
+	}
+  
+	public MyMoney(String name, int c){
+		super(c);
+		this.name = name;
+  }
+
+  public MyMoney(String name, int d, int c){
+		super(d,c);
+		this.name = name;
+  }
+
+  public MyMoney(String desc, int[] coins){
+		super(coins);
+		this.name = name;
+  }
+
+	/** getter for name */
+	public String getName(){ return this.name; }
+	
+	/** setter for name */
+	public MyMoney setName(String name){
+		this.name = name;
+		return this;
+	}
+	
+
+	@Override
+	 public String toString(){
+    return this.name + ": " + super.toString();
+  }
+
+}
