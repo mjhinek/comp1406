@@ -42,13 +42,13 @@ To compile a java file, Tutorial.java for example, you will type
 
 ```javac comp1406a0\Tutorial01.java```
  
-If the java file compiled without error, you check the comp1406a0 directory again to find a new file called **Tutorial01.class**. This is the java byte code file. 
+If the java file compiled without error, check the **comp1406a0** directory again to find a new file called **Tutorial01.class**. This is the java byte code file for the class. 
 
 Now, to run the program in the Java Virtual Machine (JVM), type
 
 ```java comp1406a0.Tutorial01```
 
-Take note that when running the program, we don't have a slash in the command and we don't include the **.class** or **.java** filename extensions. 
+Take note that when running the program, we don't have a slash in the name (we have a dot instead) and we don't include the **.class** or **.java** filename extensions. 
 
 This is how we will **compile** and **run** all of our Java code this semester.
 
@@ -57,9 +57,9 @@ Now that you know how to compile a Java file, compile and run the **SampleJavaCo
 
 __1)__ Modify the provided **Tutorial01.java** program. The comments in the java file tell you what you should be adding/modifying. Go to the __main__ method and start there.
 
-__2)__ Make a zip file of your **comp1406a0** directory. Use the default windows archive program. Right-click on the folder name, chose *send to* and then *compressed (zipped) folder*. Rename your zip file **assignment0-ABCHIJXYZ.zip** (where ABCHIJXYZ is your 9 digit student number). Submit your zip file to the submission server **http://134.117.31.149:9091/**   
+__2)__ Make a zip file of your **comp1406a0** directory. Use the default windows archive program. Right-click on the folder name, chose *send to* and then *compressed (zipped) folder*. Rename your zip file **tt1-USRENAME.zip** (where USERNAME is your *cmail* username). Submit your zip file to the tutorial submission server **http://134.117.31.???:9091/**   
 
-You can resubmit as many times as needed. Do not move on to the next part until you have a submission that receives a grade greater than 1.
+You can resubmit as many times as needed. Your last submission before the deadline (2 hours after the tutorial ends) will be your final submission and your grade wil be based on that submission. 
 
 Please note that ALL programming assignments will be submitted in this way. Be sure you understand how to submit to the server.
 
