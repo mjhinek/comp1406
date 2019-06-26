@@ -20,7 +20,7 @@ Please check your grades of your tutorials to be sure your marks are as expected
 It is assumed that you have already read the **SampleJavaCodeProgram.java** file.
 	 
 __0)__ You will be using a shell to compile and run your java programs. 
-Using Windows **cmd.exe**, create a directory (folder) called **comp1406a0**. First, run the **cmd.exe** program (which we will call the *command line* or *shell) from now on) and enter 
+Using Windows **cmd.exe**, create a directory (folder) called **comp1406a0**. First, run the **cmd.exe** program (which we will call the *command line* or *shell* from now on) and enter 
 
 ```mkdir comp1406a0```
 
