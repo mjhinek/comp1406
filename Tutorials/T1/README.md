@@ -7,18 +7,13 @@ Using the submission server and basic Java programming: control flow, arrays, ou
 ---   
    
 
-## Attendance Quiz
+## Tutorial Grade
 
-Please log on to cuLearn using one of the computers in the tutorial room and complete the attendance quiz. You can only access the quiz if you log in using one of the computers in the lab. You cannot use a laptop for this. This is a time limited quiz. Be sure to do this as soon as you arrive.
-
-At the end of the tutorial a TA will assign you a grade, call it G, which is 0, 1 or 2, depending on the progress you make during the tutorial. If you spend your time reading mail and chatting with your friends you will receive 0. If you have completed the attendance quiz on time then G will be your tutorial grade. If you have not completed the attendance quiz on time, then your tutorial grade will be max(0, G - 1/2). Each tutorial grade will therefore be one of 0, 0.5, 1.5 or 2.
-
----
-In order to receive full marks for this tutorial, you must fully complete parts 1 and 2, and make some progress into part 3. **Completing part 2 means that you successfully submit to the server and receive a non-zero grade on it**.
+Grades for tutorials will be determined by the tutorial submission server. You must submit your tutorial work no later than 2 hours after your tutorial ends to receive a grade for your tutorial. 
 
 ---
 
-Note that tutorial grades will be finalized two weeks after the tutorial has occurred. Please check your grades on the cuLearn page for your tutorial often to be sure your marks are as expected. We will not be changing marks after two weeks.
+Please check your grades of your tutorials to be sure your marks are as expected. We will not be changing marks after two weeks.
 
 ---
 
