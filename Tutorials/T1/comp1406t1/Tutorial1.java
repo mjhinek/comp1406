@@ -5,14 +5,19 @@ import java.util.Arrays;  // helper functions for arrays
 public class Tutorial1{
 
 
-  // create and return a new array
-	// the new array contains all the even integers
-	// found in the input numbers
+        // method  evens : int[] -> int[]
+	// preconditions : nums is an array of zero or more integers
+	// postconditions: o) returns a new array that has all the even numbers 
+	//                    in the input nums. 
+	//                 o) the ordering of the numbers in the output must be 
+	//                    the same as in nums
+	//                 o) the length of the returned array
+	//                    will satisfy 0 <= length <= nums.length
 	//
-	// example: if numbers is the array [2,3,4,5,6,2] then
-	//          the output should be the array [2,4,6,2] 
-	//           (with the numbers in any order)
-	public static int[] evens(int[] numbers){
+	// example: if nums is [2,3,4,5,6,2] 
+	//          then evens(nums) ->  [2,4,6,2] 
+	//          (with the numbers in any order)
+	public static int[] evens(int[] nums){
 	
 		return null;
 	}
