@@ -8,6 +8,19 @@ import java.util.Scanner;   // for keyboard input
 
 public class PrintQs{
 
+ 
+ /* method that generates the exected output  */
+ /* it is a helper method for the program     */
+ public static String makeOutput(int size){
+   String answer = "P";  // this should be changed to Q
+  
+   //
+   // add code here to build up the answer string 
+   //
+  
+   return answer;
+ }
+ 
  /* the main method is the "program"              */
  /* this is what is executed when we run the code */
  public static void main(String[] args){
@@ -26,10 +39,10 @@ public class PrintQs{
   }
   System.out.println("you entered the number " + size + " (yea!)");
   
-  //
-  // proceed to draw the images as requested in the tutorial now...
-  //
+  System.out.println("here is the output...\n");
   
+  /* call helper function to generate the expected output */
+  System.out.println( makeOutput(size) );
   
   
  }
