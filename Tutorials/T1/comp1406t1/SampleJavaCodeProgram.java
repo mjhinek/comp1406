@@ -1,7 +1,7 @@
-/* Examples of basic Java     */
-/* COMP 1406 - Winter 2019 */
+/* Examples of basic Java syntax    */
+/* COMP 1406/1006                   */
 
-package comp1406a0;
+package comp1406t1;
 
 import java.util.Arrays;  // helper functions for arrays
 import java.util.Scanner; // for keyboard input
