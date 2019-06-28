@@ -29,6 +29,14 @@ __1)__ Compile and run the **SampleJavaCodeProgram** program. The program will n
 
 __2)__ Modify the provided **Tutorial01.java** program. The comments in the java file tell you what you should be adding/modifying. Go to the __main()__ method and start there.
 
+__3)__ Complete the **findString()** method in the **Find.java** file. The method takes a string (target) and n array 
+
+```java
+public static int[] findTrues(boolean[] values){
+
+
+}
+```
 __3)__ Modify the provided **PrintQs.java** program. The program currently asks the user to enter an integer (call it the number N).  You will modify the program so that it will draw an NxN grid of Qs. For example, if you enter 7, the program will output 
 
 ```
