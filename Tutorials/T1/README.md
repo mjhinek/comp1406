@@ -63,17 +63,17 @@ QQ
 Q
 
 QQQQ
- QQQ
-  QQ
-   Q
+_QQQ
+__QQ
+___Q
 
-   Q
-  QQ
- QQQ
+___Q
+__QQ
+_QQQ
 QQQQ
 ```
 
-
+The output, in this case, has 19 lines (16 lines with Qs and 3 blank lines between the triangles). Each underscore `_` represents a space (use a space not underscore in your code). There should be no extra characters (like spaces) after the last Q in each line. 
 
 
 __4)__ Write a program with a static method that computes square roots using the _Babylonian method_.
