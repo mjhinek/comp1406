@@ -135,7 +135,7 @@ Test your code. Modify the **main** method to be
 ```java
 public static void main(String[] args){
    int[] test1 = {1,2,3,4,5};
-   System.out.println( "Expected result of numberOfEvens*test1) is 2");
+   System.out.println( "Expected result of numberOfEvens(test1) is 2");
    System.out.println( "Actual result of numberOfEvens(test1) is" + numberOfEvens(test1) );
 
    System.out.println("-- let's repeat --")
@@ -146,7 +146,7 @@ public static void main(String[] args){
 }
 ```
 
-Make a new zip file **comp1406t0.zip** following the steps outlined in Question 1 with your new **HelloWorld** class. Submit your code to the server. If your **numberOfEvens()** method is correct, your grade should now be 100%.
+Make a new zip file **t0-USERNAME.zip** following the steps outlined in Question 1 with your new **HelloWorld** class. Submit your code to the server. If your **numberOfEvens()** method is correct, your grade should now be 100%.
 
 Once you have achieved 100% on the server you have finished the tutorial. Tutorials may have additional optional questions at the end that are more challenging. If you finish the tutorial very quickly, you should try the optional questions. The TAs will be available in tutorial to help with any questions you might have.
 
