@@ -74,9 +74,9 @@ This is how we will **compile** and **run** all of our Java code this semester.
 __1)__ Make a zip file of your entire **comp1406t0** directory. You can delete your **.class** file if you wish. When submitting code we are only ever interested in your **.java** files. 
 
 Use the default archive/compression program on your machine. 
-+ For Windows, right-click on the folder name, chose *send to* and then *compressed (zipped) folder*. Rename your zip file **t1-USERENAME.zip** (where USERNAME is your *cmail* username using all lowercase letters). 
++ For Windows, right-click on the folder name, chose *send to* and then *compressed (zipped) folder*. Rename your zip file **t0-USERENAME.zip** (where USERNAME is your *cmail* username using all lowercase letters, no dots). 
 
-+ For OS X, right-click on the folder name, chose *compress "comp1406t0"*. Rename your zip file **t1-USERENAME.zip** (where USERNAME is your *cmail* username using all lowercase letters). 
++ For OS X, right-click on the folder name, chose *compress "comp1406t0"*. Rename your zip file **t0-USERENAME.zip** (where USERNAME is your *cmail* username using all lowercase letters, no dots). 
 
 
 
@@ -91,7 +91,7 @@ In order to access this webpage, you must either be directly connected to the ne
 https://carleton.ca/its/help-centre/remote-access/
 
 Once you can access the server webpage, you can log on. 
-Use your *cmail* email address as your username (use only lowercase letters and do not include dots). For example, *alicezebra@cmail.carleton.ca*, for student Alice Zebra. 
+Use your *carleton* email address as your username (use only lowercase letters and include any dots). For example, *alice.zebra@carleton.ca*, for student Alice Zebra. Note that your *cmail* username does not include the dot but your *carleton* email alias needs it.
 
 The password for your account on the server can be found in the *comments* of your *server* grade on *cuLearn*. 
 
