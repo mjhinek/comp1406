@@ -95,7 +95,7 @@ Use your *carleton* email address as your username (use only lowercase letters a
 
 The password for your account on the server can be found in the *comments* of your *server* grade on *cuLearn*. 
 
-Submit your **comp1406t0.zip** file for Tutorial 0. After you submit, you will be put in a queue for grading. Check the status of your submission a few times until you have a grade. If everything went right up to this point, your grade should be 50%. 
+Submit your **t0-USERNAME.zip** file for Tutorial 0. After you submit, you will be put in a queue for grading. Check the status of your submission a few times until you have a grade. If everything went right up to this point, your grade should be 50%. 
 
 
 __3)__ Modify the **HelloWorld** program as follows.
