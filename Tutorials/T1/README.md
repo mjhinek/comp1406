@@ -1,43 +1,60 @@
 # Tutorial 1
 
 
-## Objectives  
-Basic Java programming: control flow, arrays, input/output, using objects.    
-
----   
-   
-
-## Tutorial Grade
-
-Grades for tutorials will be determined by the tutorial submission server. You must submit your tutorial work no later than 2 hours after your tutorial ends to receive a grade for your tutorial. After each problem, resubmit your code to the submission server. Submit a zip file called **t1-USERNAME.zip** (following the instructions of Tutorial 0) that has a directory called **comp1406t1** with all of your **.java** files.
-
-http://134.117.26.180:9091
-
-Do not wait until you are finished the entire tutorial before submitting.
+## Objectives
+Basic Java programming: control flow, arrays, input/output, using objects.
 
 ---
 
-Please check your grades of your tutorials to be sure your marks are as expected. We will not be changing marks after two weeks.
+
+## Tutorial Grade
+
+Grades for tutorials are determined by a teaching assistant (TA) in the course.
+You must submit your tutorial material to the submission
+server (http://bit.ly/COMP1406S19) and you must **present** your submission
+to a TA no later than one week after the start of your tutorial (i.e., 7 days
+from the *start* of a given tutorial). You may present during any tutorial or
+office hours with the TA. You may present before your tutorial starts if you wish.
+
+Your tutorial grade for a given tutorial will be one of 0, 1 or 2. This will be based on the
+discretion of the TA when you present your code and are asked questions about it.
+
+---
+
+Please check your grades of your tutorials on your cuLearn tutorial page
+to be sure your marks are as expected. We will not be changing marks after
+two weeks from a given tutorial.
 
 ---
 
 It is assumed that you have already read the **SampleJavaCodeProgram.java** file.
-	 
-__0)__ Create a diretory called **comp1406t1** and save all Java source code files for this tutotial in this new directory.
+
+__0)__ Create a directory called **comp1406t1** and save all Java source code files for this tutorial in this new directory.
 
 __1)__ Compile and run the **SampleJavaCodeProgram** program. The program will not initially compile. Read the error message and fix the mistake in the code in order to make it compile and run. (Do not spend too much time on fixing it. Google is your friend when you run into compile errors. Check what the error means and see how to fix it. Get help from a TA if you cannot fix this relatively quickly.)
 
 __2)__ Modify the provided **Tutorial01.java** program. The comments in the java file tell you what you should be adding/modifying. Go to the __main()__ method and start there.
 
-__3)__ Complete the **findString()** method in the **Find.java** file. The method takes a string (target) and n array 
+__3)__ Complete the **findString()** method in the **Find.java** file. The method takes a string (target) and an array
+of Strings as input.
 
 ```java
-public static int[] findTrues(boolean[] values){
-
-
-}
+public static int[] findString(String target, String[] strings)
 ```
-__3)__ Modify the provided **PrintQs.java** program. The program currently asks the user to enter an integer (call it the number N).  You will modify the program so that it will draw an NxN grid of Qs. For example, if you enter 7, the program will output 
+
+The method outputs an array with all index positions in the input `strings` array where
+the input `target` appears.
+
+For example, given
+
+```java
+String[] animals = {"cat", "dog", "cat", "eel"};
+int[]    output1 = Find.findString("cat", animals);
+int[]    output2 = Find.findString("owl", animals);
+```
+the `output1` array should be `[0,2]` and the `output2` array should be `[]` (the empty array).
+
+__3)__ Modify the provided **PrintQs.java** program. The program currently asks the user to enter an integer (call it the number N).  You will modify the program so that it will draw an NxN grid of Qs. For example, if you enter 7, the program will output
 
 ```
 QQQQQQQ
@@ -81,7 +98,7 @@ _QQQ
 QQQQ
 ```
 
-The output, in this case, has 19 lines (16 lines with Qs and 3 blank lines between the triangles). Each underscore `_` represents a space (use a space not underscore in your code). There should be no extra characters (like spaces) after the last Q in each line. 
+The output, in this case, has 19 lines (16 lines with Qs and 3 blank lines between the triangles). Each underscore `_` represents a space (use a space not underscore in your code). There should be no extra characters (like spaces) after the last Q in each line.
 
 
 __4)__ Write a program with a static method that computes square roots using the _Babylonian method_.
@@ -99,7 +116,6 @@ Our version of the Babylonian method to find the square root of a number N is as
 Here, |x| is the absolute value of x and epsilon is a small positive number (like 0.0001). We use := to denote
 assignment above.
 
-Your program should prompt the user to enter the the values of N and epsilon. The program should then call your method that prints out all approximations (the value of M2) of the square root of N until is reaches the desired accuracy. When you get the return value you should compare it to the value computed using the square root method given in the **Math** class. You can do other computations (like computing the absolute value) with methods from Math. 
+Your program should prompt the user to enter the the values of N and epsilon. The program should then call your method that prints out all approximations (the value of M2) of the square root of N until is reaches the desired accuracy. When you get the return value you should compare it to the value computed using the square root method given in the **Math** class. You can do other computations (like computing the absolute value) with methods from Math.
 
 https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
-
