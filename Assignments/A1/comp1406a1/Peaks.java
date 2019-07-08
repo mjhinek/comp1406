@@ -8,32 +8,32 @@ package comp1406a1;
   */
 public class Peaks{
 
-  /** Finds the number of "peaks" in the input data array.
-	  * <p>
-	  * A value in the input data array is a peak if it is strictly
-		* larger than all adjacent (immediate neighbour) values in the
-		* data array.
-		* <p>
-		* Examples:
-		*   int[] data1 = {1,3,2,1,0,0};
-		*   numberOfPeaks(data1) ==> 1 (3 is the only peak)
-		*   int[] data2 = {4,3,6};
-		*   numberOfPeaks(data2) ==> 2 (4 and 6 are peaks)
-		*   int[] data3 = {2,2};
-		*   numberOfPeaks(data3) ==> 0 (there are no peaks)
-		*
-    *
-    * @param data is an array of one or more integers.
-    *
-    * @return the number of "peaks" in the input data array.
-    */
-
-  public static int numberOfPeaks(int[] data){
-	  int peaks = -3;
+  	/** Finds the number of "peaks" in the input data array.
+	* <p>
+	* A value in the input data array is a peak if it is strictly
+	* larger than all adjacent (immediate neighbour) values in the
+	* data array.
+	* <p>
+	* Examples:
+	*   int[] data1 = {1,3,2,1,0,0};
+	*   numberOfPeaks(data1) ==> 1 (3 is the only peak)
+	*   int[] data2 = {4,3,6};
+	*   numberOfPeaks(data2) ==> 2 (4 and 6 are peaks)
+	*   int[] data3 = {2,2};
+	*   numberOfPeaks(data3) ==> 0 (there are no peaks)
+	*
+  	*
+    	* @param data is an array of one or more integers.
+    	*
+    	* @return the number of "peaks" in the input data array.
+    	*/
+ 	public static int numberOfPeaks(int[] data){
+		int peaks = -3;
 		
 		return peaks;
-  }
+  	}
 
+	
 	/** basic testing... you should be doing much more testing on your own! */
 	public static void main(String[] args){
 		// basic testing
