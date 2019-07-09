@@ -47,7 +47,5 @@ public class Tutorial1{
 		System.out.println("second = " + Arrays.toString(second) );
 		
 		
-
-		
 	}
 }
