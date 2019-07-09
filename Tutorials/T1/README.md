@@ -13,7 +13,7 @@ Grades for tutorials are determined by a teaching assistant (TA) in the course.
 You must submit your tutorial material to the submission
 server (http://bit.ly/COMP1406S19) and you must **present** your submission
 to a TA no later than one week after the start of your tutorial (i.e., 7 days
-from the *start* of a given tutorial). You may present during any tutorial or
+from the *start* of _your_ given tutorial). You may present during any tutorial or
 office hours with the TA. You may present before your tutorial starts if you wish.
 
 Your tutorial grade for a given tutorial will be one of 0, 1 or 2. This will be based on the
