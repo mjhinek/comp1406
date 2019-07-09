@@ -98,7 +98,7 @@ QQQQ
 The output, in this case, has 19 lines (16 lines with Qs and 3 blank lines between the triangles). Each underscore `_` represents a space (use a space not underscore in your code). There should be no extra characters (like spaces) after the last Q in each line.
 
 
-__4)__ Create a public Java class called \code{OldMath} with a static method that computes square roots using the _Babylonian method_. 
+__4)__ Create a public Java class called **OldMath** with a static method that computes square roots using the _Babylonian method_. 
 
 https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method
 
