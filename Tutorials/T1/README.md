@@ -21,7 +21,9 @@ discretion of the TA when you present your code and are asked questions about it
 
 Subnit a zip file with the folling files included (or as many as you have worked on):
 - `SampleJavaCodeProgram.java`
-- 
+- `Find.java`
+- `PrintQs.java`
+- `OldMath.java`
 
 ---
 
