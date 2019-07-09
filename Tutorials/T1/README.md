@@ -19,6 +19,10 @@ office hours with the TA. You may present before your tutorial starts if you wis
 Your tutorial grade for a given tutorial will be one of 0, 1 or 2. This will be based on the
 discretion of the TA when you present your code and are asked questions about it.
 
+Subnit a zip file with the folling files included (or as many as you have worked on):
+- `SampleJavaCodeProgram.java`
+- 
+
 ---
 
 Please check your grades of your tutorials on your cuLearn tutorial page
