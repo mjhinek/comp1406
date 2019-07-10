@@ -1,7 +1,7 @@
 /* Tutorial #1             */
 /* COMP 1006/1406          */
 
-package comp1406a0;
+package comp1406t1;
 
 import java.util.Arrays;    // helper functions for arrays
 import java.util.Scanner;   // for keyboard input
