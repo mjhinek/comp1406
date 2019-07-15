@@ -1,178 +1,223 @@
 # Tutorial 2
-
-
-
+---
 
 ## Objectives  
+Practice creating and using constructors. Generate random numbers.
+
+## Submit
+
+Submit a zip file with your `comp1406t2` folder and your `Money` and `Coin` classes.
 
 
-Basic object use in Java (String, Random, and Point objects).
+## Play Computer [10 minutes]  
+
+Trace the following code. Show the values of `i`, `j`, and `sum` at every stage in the code (before the loop starts, during the iterations of the loop, and after the loop terminates.
+
+
+```java
+String[] words = {"cat", "wolf", "elk", "elephant", "sparrow"};
+int sum = 0;
+for(int i=0; i<12; i+=1){
+  int j = i % words.length;
+  if( words[j].length > 3 ){
+    sum = sum + 5;
+    i = i + 2;
+  }else{
+    sum = sum + 2;
+    i = i + 1;
+  }
+  if( i%3 == 1 ){
+    i = i + 2;
+  }
+}
+```
+
+
+## Constructors
+Modify the `Money` class that is provided. This is a simple class that stores money as dollars and cents. For example, $12.73 will be stored as 12 dollars and 73 cents.  The cents value stored should never be greater than 99, so 3 dollars and 164 cents should actually be stored as 4 dollars and 64 cents.    
+
+Do not alter the attributes.
+
+The class has only one method, `getMoney()`, which returns a String representation of the money object. Your first task is to create three constructors for the class as follows:
+
+```java
+public Money(){...}
+   // creates a Money object with zero money $0.00
+
+public Money(int dollars, int cents){...}
+   // creates a Money object with total value as specified by
+   // the input values. Input values are assumed to satisfy
+   // dollars >= 0 and cents >= 0.
+
+public Money(int cents){...}
+   // creates a Money object with value as specified by
+   // the input cents. Input value is assumed to satisfy
+   // cents >= 0
+```
+
+The `Money` class has a `getMoney()` method to help test/debug your code. It returns a String representation of the money.
+
+Use the testing program `TestMoney.java` to help test your constructors.
+
+Next, add the following _instance methods_ to your `Money` class:
+
+```
+public void add(int c){...}
+ // adds c cents to the current value
+
+public void add(int d, int c){...}
+ // adds d dollars and c cents to the current value
+
+public int remove(int c){...}
+ // removes c cents from current value if current
+ // value is large enough. Otherwise, removes as much as it can.
+ // Returns the actual amount of cents removed (may be > 100)
+```
+
+Be sure to test your methods. Pay special attention to the `remove` method. As with the constructors, the intention is that your internal representation of the money will satisfy the condition `0 <= cents <= 99` at all times. Adjust your dollars and cents so that this is always maintained.
+
+
+## Flipping a coin
+
+Complete the class called `Coin`. A coin (each Coin object) can either be fair or unfair. A fair coin is unbiased and when you flip it will land on heads or tails with equal probability (50%). An unfair coin is biased (it lands on heads wins some probability `p` and tails with probability `1-p`).
+
+The coin class has two `class attributes`
+
+```java
+public static final String HEADS = "Heads";
+public static final String TAILS = "Tails;"
+```
+Do NOT change these in anyway. You should use these when referring to heads and tails.
+
+The `Coin` class has two constructors
+
+```java
+public Coin()           // create a fair Coin
+public Coin(double p)   // create an unfair Coin
+```
+
+The first constructor is used to create fair coins. The second constructor creates a coin that when flipped will be heads with probability `p` and tails with probability `1-p`. Note: the second constructor can also be used to create a fair coin by passing 0.5 as input.
+
+You are free to add any more _instance attributes_ as you need. Be sure they are all _private_.
+
+The `Coin` class has the following instance method
+
+```java
+public String flip()
+```
+
+that outputs either `HEADS` (with probability `p`) or `TAILS` (with probability `1-p`). This method should only return one of the two static (class) attributes.
+
+The `Coin` class has the following instance method
+
+```java
+public int  numberOfFlips()
+```
+
+that simply returns how many times this given coin (Coin object) has been flipped.
+
+The `Coin` class has the following instance method
+
+```java
+public String[] history()
+```
+
+which returns a list (array) of the past 10 flips (or less if there haven't been 10 flips yet). The order of the output array should correspond to the order that the flips occurred (in reverse order). The first String should be the _last_ flip. You **must** use an array for this. Do **NOT** use `ArrayList` or any other Java container classes to store the history state. Hint: You will need to have an attribute to keep track of the history. Read the _Extra Help_ section below for help with this.
+
+The `Coin` class **must** involve a `java.util.Random` object to generate the coin flips. (See the _Extra Help_ section below for more information about this.)
+
 
 ---
 
-## Attendance Quiz
-
-Please log on to cuLearn using one of the computers in the tutorial room and complete the attendance quiz. You can only access the quiz if you log in using one of the computers in the lab. You cannot use a laptop for this. This is a time limited quiz. Be sure to do this as soon as you arrive.
-
-At the end of the tutorial a TA will assign you a grade, call it G, which is 0, 1 or 2, depending on the progress you make during the tutorial. If you spend your time reading mail and chatting with your friends you will receive 0. If you have completed the attendance quiz on time then G will be your tutorial grade. If you have not completed the attendance quiz on time, then your tutorial grade will be max(0, G - 1/2). Each tutorial grade will therefore be one of 0, 0.5, 1.5 or 2.
-
----
-In order to receive full marks for this tutorial, you must fully complete parts 1 and 2, and make good progress into part 3. 
-
----
-### Notes
-
-What is question 1 asking? It is asking you to process an array of strings: printing something on the screen for each string (capitalized version of the string, the length of the string) and keeping track of the total number of characters in all the strings seen and the longest string.
-
-What is question 2 asking? In this question you are simulating rolling a pair of dice. You are asked to roll a pair of dice many times and keep track of how many times the total (of the two dice) is thrown. You need to use a  **Random** object for each die.
-
-What is question 3 asking? In this question, you need to add some **instance behaviour** (object methods) to a simple class and then test the methods.
+# Extra Help
 
 
----
+## Basic (Pseudo) Randomness
+
+Programs often need some "randomization".  We will consider two ways to easily generate a pseudorandom number. A pseudorandom sequence of numbers looks like a random sequence of numbers but it is actually computed using a deterministic algorithm.  For our purposes, we can consider it as good enough to be random.  
 
 
-__0)__ Create a folder/directory called **comp1406t2** and download/copy the tutorial files into this folder/directory. Code for this tutorial belongs to the **comp1406t2** package so it will need to be in this folder/directory.
+### Math.random()
 
+`Math.random()` will return a pseudorandom double, call it X, that satisfies `0.0 <= X < 1.0`.
 
-__1)__ In the **Tutorial02** program, modify the static method called **strings** that has the following modifiers, return type and signature (name and input argument types)
+Using the output of this static method, we can simulate die rolls, coin flips, etc.
 
-```public static void strings()```
+For example, to simulate the roll of a 6-sided die, we can generate random integers in the range [1,6] using
 
-The method will access the (static) class attribute **words**.  The method will access each string in the words array and display to the terminal (System.out) the following: 
+`1 + (int) (Math.random()*6)`
+
+Why does this never generate 7? The `Math.random()*6` will generate a random number, call it X, that satisfies `0.0 <= X < 6.0`. When we cast this to an integer, Java simply throws away the decimal part, so we only get the integers 0,1,2,3,4 and 5. The final output, based on the value of X will be
 
 ```
-Cat, is 3 letters long.
-Dog, is 3 letters long.
-...
-Kit, it 3 letters long.
-
-The longest word is KITTEN.
-There were 39 characters in total.
+0.0 <= X < 1.0 --> 1
+1.0 <= X < 2.0 --> 2
+2.0 <= X < 3.0 --> 3
+3.0 <= X < 4.0 --> 4
+4.0 <= X < 5.0 --> 5
+5.0 <= X < 6.0 --> 6
 ```
 
-For each string, print the **capitalized** version of the word, followed by "is X letters long", where X is the length of the string. After processing all the words, print out the string that has the longest length (in **full caps**) and then the total of all characters in all the words.
+### The Random Class
 
-You can find details of the behaviour of string objects (methods) in the **API** for the String class
+The `java.util.Random` class provides methods for generating random sequences (integers, floating point numbers, booleans). Unlike the Math class, you will need to create an instance of the Random class (i.e., create an object of type Random) to use it.  The methods in the class are _not_ static.
 
-https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
-
-
-__2)__ The **Random** class allows us to generate pseudorandom numbers (and other things). A sequence of pseudorandom random numbers *looks* like random sequence of numbers but is actually computed with a deterministic algorithm using a **seed**. If you use the same seed you get the exact same sequence of numbers. If the seed is chosen randomly then a good pseudorandom number generator will be indistinguishable from a truly random number generator. For our purposes, we won't worry about truly random numbers. (If you are securing a website you would want to use truly random numbers.)
-
-Modify the method called
-
-```public static void rollRandomDice(long seed)```
-
-in the **Tutorial02** program. Be sure to **import** the Random class. You do this by adding the line 
+To simulate the roll of a die (an integer in the range [1,6]) we would use
 
 ```
-import java.util.Random;
+java.util.Random die = new Random();
+int die_roll = 1 + die.nextInt(6);
 ```
 
-between your package line and your class declaration line in the Tutorial02.java file.
-
-Your method will create two **Random** objects. You will create your dice (random objects) as follows:
-
-```
-Random die1 = new Random();
-Random die2 = new Random();
-```
-
-Each random object will be used to simulate a fair die (6-sided die). Using the **nextInt** method, you will _roll_ each die and add up their face values.  Consult the **API** to see how to use the method to get values from 1 to 6 (inclusive).
-
-https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Random.html
+See the API for the class to see what other methods the class provides.
+[https://docs.oracle.com/javase/8/docs/api/java/util/Random.html](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)
 
 
-The distribution of values (if each die is fair) is given at the end of this document. You can also see the distribution at
+## History
 
-https://mathinsight.org/media/image/image/two_dice_distribution.png
+How do we remember the last 10 flips in order. We could create a new data structure (class) to deal with this nicely. In fact, we may do that later in the semester. For now, we'll use a simple fixed size array.
 
-You 
-Roll the dice 10000 times and record how many times each total (sum of face values) is rolled. 
+Suppose we allocate memory for an array of Strings to hold 10 Strings. The tables shown below show index value (top) and array contents (bottom)
 
-Hint: Use an array of size 11 (since there are 11 possible outcomes ranging from 2 to 12) to record the frequency of each rolled total (sum of the two dice). 
+Initially we have
 
-Note that when you called the **rollRandomDice** method, you need to pass a seed value. It is not used yet so just pass any value you want. 
+|0|1|2|3|4|5|6|7|8|9|
+|-|-|-|-|-|-|-|-|-|-|
+|null|null|null|null|null|null|null|null|null|null|
 
-Print, to **System.out**, the frequency distribution you get after all the dice rolls. 
+Let's have an integer variable, call is `position` to keep track of the _next_ place in the array where we will store a head/tail. Initially, it is set to 9 (the back of the array). `int position = array.length-1`.
 
-**Question:** Is it as expected (i.e., is it the same as the plot shown in the link above)?
+Suppose the first flip is tails.  We put a tails in the array at index `position` and then decrement position (`position = position -1;`). If the next flip is heads, we have
 
-Now go back and after you create each die, set the **seed** for each using 
+|0|1|2|3|4|5|6|7|8|9|
+|-|-|-|-|-|-|-|-|-|-|
+|null|null|null|null|null|null|null|null|Heads|Tails|
 
-```
-die1.setSeed(seed);
-die2.setSeed(seed);
-```
+with position being 7.
 
-Here **seed** is the value passed as input to the method. What happened to your distribution? What happens if you change this to 
+Suppose we ask for the history. We can iterate through the array (in a forward direction) starting in `position+1`. Our `numberOfFlips()` method will tell us how many times to iterate (either 10 or less). In this case, we have 2 iterations.
 
-```
-die1.setSeed(seed);
-die2.setSeed(seed+1);
-```
+This is fairly straightforward until we have done 10 or more flips. Just after the 10th flip, `position` should be equal to `-1`, which is not a valid index position. To avoid any array index out of bounds errors, we will wrap the array around to the back of itself be letting `position` be equal to `array.length-1`. We then continue adding flips from the back overwriting any flip that was already recorded (which is OK since it would be further in the past than 10 flips). So whenever we decrement `position`, we just need to remember to wrap around to the back when we go past the front. This is a simple check when we perform the decrement.
 
-Can you explain the differences?
+Whenever we want to get the history, in general, we always start with `position  +1` and then iterate the needed number of times (in a forward direction). If at any time an index position is equal to (or greater than) the length of the array we wrap it around to the front of the array.
 
+Suppose we have the following 10 flips: T, H, H, H. H, H,T, T, T, T. The array will be
 
+|0|1|2|3|4|5|6|7|8|9|
+|-|-|-|-|-|-|-|-|-|-|
+|Tails|Tails|Tails|Tails|Heads|Heads|Heads|Heads|Heads|Tails|
 
-Note: In practice, pseudorandom numbers are _usually_ good enough. Obtaining **truly random** numbers is expensive (in time and effort). We obtain truly random numbers by observing nature: measuring radioactive decay, observing microscopic temperature fluctuations of the cpu or other various electromagnetic/quantum phenomena. It is not always possible to generate enough truly random numbers for our needs. Only some applications require truly random numbers though (like when securing a bank's website).
-Using a pseudorandom sequence with a single truly random seed is often good enough. For us, we usually won't even worry the seed.
+and `position` will be 9 (it would have been -1 but we checked and made it equal to `array.length-1`).
 
- 
-__3)__ Modify the **Point2D** class to add some behaviour. In particular, modify the (NON-static) methods 
+How would be get the history? We start from index position `position+1`. This is too big so we wrap to the front and start with index 0 (we replace `position` with `position % array.length`) and iterate 10 times.
+
+If we flip a heads after this, we have
 
 
-```
-public double magnitude()
-public double distance(Point2D other)
-public String toString()
-```
+|0|1|2|3|4|5|6|7|8|9|
+|-|-|-|-|-|-|-|-|-|-|
+|Tails|Tails|Tails|Tails|Heads|Heads|Heads|Heads|Heads|Heads|
 
-The **magnitude** returns the distance from that point to the origin (i.e., the point (0,0)). The **distance** method returns the distance between the point and the input point.  The **toString** method returns a string that represents the point. For example, if you have the code fragment
+and `position` is 8.
 
-```
-Point2D p = new Point2d();
-p.x = 1.2;
-p.y = 2.6;
-System.out.print( "magnitude of point " );
-System.out.print( p.toString() );
-System.out.println( " is " + p.magnitude() );
-```
-
-it should output something like
-
-```
-magnitude of point (1.2, 2.6) is 2.86356
-```
-
-The return value of the toString() method here was the string **"(1.2, 2.6)"**. Your method should return this string. 
-
-Note: the distance between points (a,b) and (c,d) is sqrt( (a-c)*(a-c) + (b-d)*(b-d) ). Use the Math class OR your Babylonian method to compute square roots. 
-
- 
-In the **Tutorial02** program, modify  
-
-```
-public static void testPoint2D()
-```
-
-that tests your Point2D class. It should generate several points, compute the lengths of them and the distance between some of them. Be sure to print useful information in this testing. For example, include what the input is, what the output is and what the expected output it.
-
- 
------
-
-```
-The chance of rolling a total of 2 is 2.78%
-The chance of rolling a total of 3 is 5.56%
-The chance of rolling a total of 4 is 8.33%
-The chance of rolling a total of 5 is 11.11%
-The chance of rolling a total of 6 is 13.89%
-The chance of rolling a total of 7 is 16.67%
-The chance of rolling a total of 8 is 13.89%
-The chance of rolling a total of 9 is 11.11%
-The chance of rolling a total of 10 is 8.33%
-The chance of rolling a total of 11 is 5.56%
-The chance of rolling a total of 12 is 2.78%
-```
+This is an example of a **circular array**.
