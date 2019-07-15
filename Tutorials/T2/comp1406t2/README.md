@@ -87,7 +87,7 @@ The coin class has two `class attributes`
 public static final String HEADS = "Heads";
 public static final String TAILS = "Tails;"
 ```
-Do NOT change these in anyway. You should use these when referring to heads and tails.
+Do NOT change these in any way. You should use these when referring to heads and tails.
 
 The `Coin` class has two constructors
 
