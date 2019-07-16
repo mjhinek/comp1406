@@ -61,7 +61,7 @@ Use the testing program `TestMoney.java` to help test your constructors.
 
 Next, add the following _instance methods_ to your `Money` class:
 
-```
+```java
 public void add(int c){...}
  // adds c cents to the current value
 
@@ -79,6 +79,7 @@ Be sure to test your methods. Pay special attention to the `remove` method. As w
 
 ## Flipping a coin
 
+
 Complete the class called `Coin`. A coin (each Coin object) can either be fair or unfair. A fair coin is unbiased and when you flip it will land on heads or tails with equal probability (50%). An unfair coin is biased (it lands on heads wins some probability `p` and tails with probability `1-p`).
 
 The coin class has two `class attributes`
@@ -87,7 +88,7 @@ The coin class has two `class attributes`
 public static final String HEADS = "Heads";
 public static final String TAILS = "Tails;"
 ```
-Do NOT change these in any way. You should use these when referring to heads and tails.
+Do NOT change these in anyway. You should use these when referring to heads and tails.
 
 The `Coin` class has two constructors
 
@@ -221,3 +222,21 @@ If we flip a heads after this, we have
 and `position` is 8.
 
 This is an example of a **circular array**.
+
+# Javadocs
+
+The `Coin` class has a good number of comments in it. The comments might seem
+a bit unusual at first. They are special comments that the javadoc tool uses to
+generate the nice HTML APIs that you see when you look at Java's documentation
+online. For example, see the `String` classes API at {https://docs.oracle.com/javase/8/docs/api/java/lang/String.html}.
+
+In order to generate the API files, from the same working directory where you
+compile and run your tutorial code, type
+
+```
+javadoc -d comp1406t2\docs comp1406t2\Coin.java -author -version
+```
+
+This will create a new folder called `docs` in the `comp1406t2` folder.
+Inside the `docs` folder is an `index.html` file. If you click on this file
+it will open in a web browser. You can now see the `Coin` class's API.
