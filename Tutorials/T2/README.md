@@ -240,3 +240,9 @@ javadoc -d comp1406t2\docs comp1406t2\Coin.java -author -version
 This will create a new folder called `docs` in the `comp1406t2` folder.
 Inside the `docs` folder is an `index.html` file. If you click on this file
 it will open in a web browser. You can now see the `Coin` class's API.
+
+Note: if you are using OS X or Linux, you will have to types
+
+```
+javadoc -d comp1406t2/docs comp1406t2/Coin.java -author -version
+```
