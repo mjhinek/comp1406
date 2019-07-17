@@ -9,6 +9,13 @@ Practice creating and using constructors. Generate random numbers.
 Submit a zip file with your `comp1406t2` folder and your `Money` and `Coin` classes.
 
 
+---
+
+You must complete the `Money` class to receive full marks for the tutorial. However, I strongly suggest you complete the `Coin` class as well.
+
+---
+
+
 ## Play Computer [10 minutes]  
 
 Trace the following code. Show the values of `i`, `j`, and `sum` at every stage in the code (before the loop starts, during the iterations of the loop, and after the loop terminates.
