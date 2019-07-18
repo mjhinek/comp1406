@@ -21,7 +21,7 @@ This assignment has 100 marks. Submissions made by the due date will be graded o
 
 ---
 
-In this assignment,  **you will need to add atttribiutes** (state) to your `Temperature`, `Lock` and `Box` classes. You may add any attributes that you see fit. You may also add any helper method that you need. Just keep in mind that we can only test your code by calling the methods in specified in the classes you need to complete (So your helper methods need to be called from these).  
+In this assignment,  **you will need to add attributes** (state) to your `Temperature`, `Lock` and `Box` classes. You may add any attributes that you see fit. You may also add any helper method that you need. Just keep in mind that we can only test your code by calling the methods in specified in the classes you need to complete (So your helper methods need to be called from these).  
 
 ---
 
@@ -37,9 +37,9 @@ In this problem you will need to be able to convert temperatures between Celsius
 
 A temperature object holds a single temperature and displays it in one of the three scales. Once a scale has been set, it will display the temperature in that scale until changed. The default scale is Celsius if not specified.
 
-The three scales are represented by an **Enum** class (`Scale.java`). For this assignment, the purpose of the enum class is to provide a sonsitent naming scheme for the different scales. Essentially, we assign fixed names for the three scales and use these everywhere in the code much like we would if we decarled static final strings in our class. Teh compiler checks if the names are right. If we used Strings instead, if you spelled the scale incorrectly (easy to do with these words), you would fail all the autotesting.   
+The three scales are represented by an **Enum** class (`Scale.java`). For this assignment, the purpose of the enum class is to provide a consistent naming scheme for the different scales. Essentially, we assign fixed names for the three scales and use these everywhere in the code much like we would if we declared static final strings in our class. The compiler checks if the names are right. If we used Strings instead, if you spelled the scale incorrectly (easy to do with these words), you would fail all the auto-testing.   
 
-How do you use an enum? They are simple to use. You do not create them with `new` and you do not need to use `.equals` to compate them. You just use them as placeholders for the value we want.  
+How do you use an enum? They are simple to use. You do not create them with `new` and you do not need to use `.equals` to compare them. You just use them as place-holders for the value we want.  
 
 ```java
 Scale s = Scale.CELCIUS;       // a variable of an enum type
@@ -48,7 +48,7 @@ Temperature t2 = new Temperature(87.2, Scale.FAHRENHEIT);
 boolean b = Scale.CELCIUS == s;   // will be true! can compare with ==
 ```
 
-For one of the constructors, you are allowed to pass a string to specify the scale. It should allow for some flexibility in the input. For example, `"FAHRENHEIT"`, `"Fahr"`, `"f"` and `"FaHReNHeI"` should be all accepted and interpreted as Fahrenheit. 
+For one of the constructors, you are allowed to pass a string to specify the scale. It should allow for some flexibility in the input. For example, `"FAHRENHEIT"`, `"Fahr"`, `"f"` and `"FaHReNHeI"` should be all accepted and interpreted as Fahrenheit.
 
 Some examples of using a `Temperature` object:
 
