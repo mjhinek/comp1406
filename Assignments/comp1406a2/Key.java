@@ -10,7 +10,7 @@ public class Key{
 	 * linked to the lock it matches. Only ONE key should every be created
 	 * for any given lock.
 	 */
-	protected static Hashset<Integer> hs = new HashSet<Integer>;
+	protected static HashSet<Integer> hs = new HashSet<Integer>();
 
 	/** The lock that this key matches */
 	protected final Lock lock;
@@ -27,8 +27,9 @@ public class Key{
 		if( !hs.contains(lock.getID()) ){
 			hs.add(lock.getID());
 			this.lock = lock;
+		}else{
+			this.lock = null;
 		}
-		this.lock = null;
 	}
 
 
@@ -51,7 +52,7 @@ public class Key{
 	 */
 	public int lockID(){
 		// Oh my! The ternary operator in action.
-		return invalid ? -1 : this.lock.getID();
+		return invalid() ? -1 : this.lock.getID();
 
 
 		// this is equivalent to
