@@ -38,7 +38,7 @@ public class Lock{
   	/** Unlocks the lock if the input key matches the lock.
 	 * <p>
 	 * If this lock is already unlocked this method will return true and
-	 * do nothing else.
+	 * do nothing else. 
 	 * If this lock is locked and input key matches this lock, then it
 	 * unlocks the lock and returns true.
 	 * If this lock is locked and the input key does not match this lock,
