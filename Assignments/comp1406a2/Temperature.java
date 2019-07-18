@@ -9,7 +9,7 @@ public class Temperature{
 
 
 
-/** Initializes a temperature object with given value in Celsius
+/** Initializes a temperature object with given value in Celcius
  *
  *  If the initial temperature is less than -273.15C then the temperature
  *  object will be initialized with -273.15C.
@@ -40,22 +40,22 @@ public class Temperature{
  * If the temperature is lower than absolute zero, in the given scale,
  * then set the temperature to absolute zero (in that scale).
  * <par>
- * Example: each of the following will create the same temperature 12.3K
+ * Example: each of the following will create the same temerature 12.3K
  *          new Temperature(12.3, "Kelvin")
  *          new Temperature(12.3, "k")
  *          new Temperature(12.3, "kel"
  *
  * @param temp is the initial temperature
- * @param scale is a the scale of initial temperature. As long as the input string 
- *        can uniquely identify one of the three scales it is acceptable.  
+ * @param scale is a the scale of initial temperature. As long as the input string
+ *        can uniquely identify one of the three scales it is acceptable.
  *        Case is not important. Abbreviations are allowed.
  */
   public Temperature(double temp, String scale){
   }
 
-	
-	
-	
+
+
+
 /** getter for the scale
  *
  * The output of this getter method must always be the first letter of one
@@ -125,7 +125,7 @@ public class Temperature{
   /** String representation of a temperature object    */
   @Override
   public String toString(){
-    return "" + this.getTemp() + Scale.toChar(this.getScale());
+    return "" + this.getTemp() + this.getScale().name().charAt(0);
   }
 
 }
