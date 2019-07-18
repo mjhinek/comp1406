@@ -1,4 +1,4 @@
-poackage conp1406a2;
+package comp1406a2;
 
 /**
  * A Temperature object represents temperature (with a value and scale)
