@@ -44,8 +44,7 @@ public class Proof{
 	 *        is the same as the proof secret. Returns false otherwise.
 	 */
 	public boolean verify(){
-		Secret s = box.unlock(key).getSecret();
+		Secret s = box.open(key).getSecret();
 		return this.secret.equals(s);
-
 	}
 }
