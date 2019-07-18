@@ -7,7 +7,7 @@ package comp1406a2;
 
 	// ADD ATTRIBUTES HERE
 
-	 
+
 	 /** Creates a Box object containing the specified secret with the specified lock.
 	 *
 	 * @param secret is the secret the box will holds
@@ -20,8 +20,8 @@ package comp1406a2;
 	 * @return true if the box is open (unlocked) and false otherwise.
 	 */
 	public boolean isOpen(){return false;}
-	 
-	 
+
+
 	 /** Open this box's lock with the given key (if it matches the lock)
 	  * <p>
    	  * An already open box will remain open regardless of input key.
@@ -65,7 +65,7 @@ package comp1406a2;
 	 * @param key is a key (that will be added in this box)
 	 * @return this box (for method chaining purposes).
 	 */
-	public Box addKey(Key key){}
+	public Box addKey(Key key){return null;}
 
 
   	/** Checks if this box has a key inside it (when the box is open)
