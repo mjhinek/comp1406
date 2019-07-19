@@ -56,13 +56,9 @@ public class Temperature{
 
 
 
-/** getter for the scale
+/** getter for the scale. The output will always be one of the enum objects from Scale.
  *
- * The output of this getter method must always be the first letter of one
- * of the strings in the <code>scales</code> array, capitalized.
- *
- * @return the current scale of the object as a single char (the first letter,
- *         capitalized of one of the strings from <code>scales</code>)
+ * @return the current scale of this object. 
  */
   public Scale getScale(){
     return Scale.KELVIN;
@@ -79,8 +75,6 @@ public class Temperature{
 
   /** setter for scale
   *
-  *
-  *
   * @param scale is the new scale of the temperature and must be
   *        a constant from the Scale enum type.
   */
@@ -96,7 +90,6 @@ public class Temperature{
   }
 
   /** setter for temperature
-  *
   *
   * @param temp is the new temperature
   * @param scale is the scale of the new temperature. It must be
