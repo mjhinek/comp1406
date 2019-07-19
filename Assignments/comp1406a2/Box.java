@@ -9,11 +9,11 @@ package comp1406a2;
 
 
 	 /** Creates a Box object containing the specified secret with the specified lock.
+	 * Will create a new Lock for this box. The box will be close (locked) after creation.
 	 *
-	 * @param secret is the secret the box will holds
-	 * @param lock is the lock for the box
+	 * @param secret is the secret the box will hold
 	 */
-	public Box(Secret secret, Lock lock){}
+	public Box(Secret secret){}
 
 	/** Checks if the box is opened (unlocked) or closed (locked)
 	 *
