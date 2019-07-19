@@ -54,11 +54,11 @@ Some examples of using a `Temperature` object:
 
 ```java
 Temperature t = new Temperature(10.1);
-System.out.println(t.getScale());    // outputs the char 'C'
+System.out.println(t.getScale());    // outputs Scale.CELSIUS.toString()
 System.out.println(t);               // outputs 10.1C
 t.setScale(Scale.FAHRENHEIT);        // change scale
 System.out.println(t);               // outputs 50.18F
-System.out.println(t.getScale());    // outputs the char 'F'
+System.out.println(t.getScale());    // outputs Scale.FAHREHEIT.toString()
 t = new Temperature(12.25, "Kel");   // must recognize short form
 System.out.println(t);               // outputs 12.25K
 ```
