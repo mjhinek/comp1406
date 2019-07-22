@@ -1,180 +1,121 @@
-# Not ready for Summer 2019
-
----
-
----
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Tutorial 3
-
+---
 
 ## Objectives  
-Practice making simple objects with methods, attributes and constructors. Use **enum** types. Use **javadoc** commenting.
+Practice using inheritance, polymorphism and javadocs.
 
----
+## Submit
 
-## Attendance Quiz
-
-Please log on to cuLearn using one of the computers in the tutorial room and complete the attendance quiz. You can only access the quiz if you log in using one of the computers in the lab. You cannot use a laptop for this. This is a time limited quiz. Be sure to do this as soon as you arrive.
-
-At the end of the tutorial a TA will assign you a grade, call it G, which is 0, 1 or 2, depending on the progress you make during the tutorial. If you spend your time reading mail and chatting with your friends you will receive 0. If you have completed the attendance quiz on time then G will be your tutorial grade. If you have not completed the attendance quiz on time, then your tutorial grade will be max(0, G - 1/2). Each tutorial grade will therefore be one of 0, 0.5, 1.5 or 2.
-
----
-In order to receive full marks for this tutorial, you must fully complete parts 1 and 2, and make good progress into part 3.
+Submit a zip file with your `comp1406t3` folder and your `Animal`, `Cat`, `Dog`,  `Owl` classes. For full marks, you must complete everything up to and including problem 3 (Owl). I recommend you try and complete the rest. You will be tested on the javadoc tool and interfaces (either midterm or final exam).
 
 
 ---
 
-__0)__ Make a directory called **comp1406t3**. Download all the tutorial 3 files to this directly.
+# 1. Animal
 
-__1)__ Modify the **Money** class that is provided.  This is a simple class that stores money as dollars and cents. For example, $12.73 will be stored as 12 dollars and 73 cents.  The cents value stored should never be greater than 99, so 3 dollars and 164 cents should actually be stored as 4 dollars and 64 cents.    
+Consider the `Animal` class provided. It is an abstract class to model animals. Read the class and see what it provides.
 
-The class has only one method, **toString()**, which returns a String representation of the money object. Your first task is to create four constructors for the class as follows:
+Override Object's `toString()` method in the `Animal` class so that it prints out the animals name and age.
 
-```
-public Money(){...}
-  // create an object with zero dollars and cents.
-
-public Money(int c){...}
-  // create an object with c cents
-  // (adjusting dollars and cents so that 0<=cents<=99)
-
-public Money(int d, int c){...}
-  // create an object with d dollars and c cents
-  // (adjusting dollars and cents so that 0<=cents<=99)
-
-pubic Money(int[] coins){...}
-  // input array has 6 elements and corresponds to
-  // {#toonies, #loonies, #quarters, #dimes, #nickels, #pennies}
-  // {$2, $1, $0.25, $0.10, $0.05, $0.01}
-  // create an object with total money passed in array
-  // (adjusting internal dollars and cents so that 0<=cents<=99)
-```
-
-In all the constructors, be sure that the internal state (dollars and cents) represents the total money and that cents is not greater than 99.
-
-The **Money** class has a **toString()** method to help test/debug your code. It returns a String representation of the money.
-
-Use the testing program **TestMoney.java** to help test your constructors.
-
-Next, add the following instance methods to your **Money** class:
+Note: assuming your computer's clock is correct, we can get the current year in Java using
 
 ```
-public void add(int c){...}
- // adds c cents to the current value
- // Again, be sure the internal states
- // does not have cents greater than 99
-
-public void add(int d, int c){...}
- // adds d dollars and c cents to the current value
- // Again, be sure the internal states
- // does not have cents greater than 99
-
-public int remove(int c){...}
- // removes c cents from the current amount of money, 
- // if there is enough money to remove c cents.
- // Otherwise, removes as much as it can.
- // Returns the amount actually removed.
- // Note: the input will satisfy c >= 0 (and it may be > 100).
+java.util.Calendar now = java.util.Calendar.getInstance();
+int year = now.get(java.util.Calendar.YEAR);
 ```
 
-Be sure to test your methods. Pay special attention to the **remove** method. As with the constructors, the intention is that your internal representation of the money will satisfy the condition **0 <= cents <= 99** at all times. Adjust your dollars and cents so that this is always maintained.
+---
 
-#### More Reading
+# 2. Cat and Dog
+The `Cat` and `Dog` classes should __extend__ the animal class. Add any needed constructors and methods to make these work.
 
-https://docs.oracle.com/javase/tutorial/java/javaOO/constructors.html
+Each class should have a constructor that takes a String (name) and integer (birth year) as input.
+
+he noise that a cat makes should be `"meow"` or `"prrr"` (randomly chosen each time it's noise method is called), and the noise a dog makes should be `"woof"` if the dog 3 years or older and `"yelp"` otherwise.
+
+Each class should override the `toString()` method inherited from `Animal` so that it outputs the same thing plus what kind of animal it is. For example, if the `toString()` (as inherited from `Animal`) returned `"kitty, 3"` then is should now output `"kitty, 3 (Cat)"` (if it was a Cat object). Do not use `instanceof` for this. Do not re-write code that you already wrote in `Animal`s `toString()` method. Hint: you should be using `super`.  
+
+---
+
+##  AnimalApp
+The `AnimalApp` program generates an array of animals and calls the noise method of each. You can use this to test your `Animal`, `Cat` and `Dog` classes.
 
 
+# 3.  Owl
+Create an `Owl` class that extends the `Animal` class. The class should have a three-argument constructor that takes a string (name), an integer (birth year) and a boolean (that determines if it is a __wise__ owl or not). The string representation of an owl should include its name, age and whether or not it is wise or not.
 
-__2)__ An **enum** (enumeration) type is a special Java  class to hold constants. By convention, constants in Java are always in FULL CAPS. Essentially, objects of the enum class are each of the possible constants.
+An owl's noise is `"hoooo"`. An owl should have a getter for its _wisdom_ state. The method should be called `isWise()`/
 
-See the **Month.java** enum type provided. We can use this Month enum when need to use months.
+Modify the `AnimalApp` program so that some owl objects are also created.
 
-Java provides some pre-built methods in every **enum** class. These include
+---
+---
 
-- **toString()** will return a string representation of the constant.
-- **values()** will return an array containing all possible constants (in the order that they appear in the enum definition.
-- **valueOf(String)** will return the enum object corresponding to the input string (if possible).
+# 4.  JavaDocs
 
-Run the **UseMonthEnumType** program to see how these methods used.
 
-Add a static method to the UseMonthEnumType program. The method should look like
+Look at the code in the `Animal` class.  You'll notice that the comments look slightly different. These comments are used by the _javadoc_ tool to generate html files that format the class API nively (just like on Oracle's website).
+
+In order to generate the API files, from the same working directory where you
+compile and run your tutorial code, type
 
 ```
-public static int days(Month month)
+javadoc -d comp1406t3\docs comp1406t3\Animal.java -author -version
 ```
 
-The method will have a **switch ** statement that will determine the number of days in the provided (input) month. The function will then return this number. Don't worry about leap years (i.e., FEBRUARY will always have 28 days).
+This will create a new folder called `docs` in the `comp1406t3` folder.
+Inside the `docs` folder is an `index.html` file. If you click on this file
+it will open in a web browser. You can now see the `Animal` class's API.
 
-#### More Reading
+Note: if you are using OS X or Linux, you will have to types
 
-https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
-http://tutorials.jenkov.com/java/enums.html
+```
+javadoc -d comp1406t3/docs comp1406t3/Animal.java -author -version
+```
 
-__3)__ In this problem, you will use **Javadoc**.
-
-Look at the code in the **Find** class.  You'll notice that the comments might look slightly different than normal Java comments. The commenting used is in the Javadoc format. What is Javadoc? From wiki, we see  
+The API you are looking at was generated by the Javadoc tool, using the special comments in the `Animal` class. What is the Javadoc tool?  From wikipedia, we find
 
 _Javadoc is a documentation generator from Oracle Corporation for generating API documentation in HTML format from Java source code. The HTML format is used to add the convenience of being able to hyperlink related documents together._
 
-An **API** is the application programming interface. This is the interface between the writers of the code (classes) and the users of the code.
 
-In order to generate the _html_ code for the API, we will use the **javadoc** program from the command line (using cmd or terminal). In the directory where you compile and rnu your code for this tutorial, type
-
-##### Windows Users
-```
-javadoc -d comp1406t3\docs comp1406t3\Find.java -author -version
-```
-
-##### OS X or Linux Users
-```
-javadoc -d comp1406t3/docs comp1406t3/Find.java -author -version
-```
-
-
-This will create a new directory called **docs** in your **comp1406t3** directory. Inside this new directory, is the _html_ code for the API for the Find class. In the windows file viewer, click on the **index.html** file. This will open the file in a web browser. Click on the **Find** class (left pane) and see the API for the Find class.
-
-What happened?
-
-- _-d comp1406t3\docs_ specifies where to put the html files
-- _comp1406t3\Find.java_ specified which file to generate javadocs for (use *.java for all java files)
-- _-author -version_ specify to list the author and version (if specified in the java files).
-
-How do you write javadoc comments?
 In your code, you can add a special comment block just __before__ a class, attribute, method or constructor
 declaration.  This block of comments will be used in the generated API to describe whatever it is that the
 comment blocks comes before.  There are some special tags that the Javadoc tool will read and use in this
 comment block.  Here some simple rules
 
 - The comment block must start with `/**` (two stars instead of 1) and end with `*/`
-- For methods, each input argument should have an associated **@param** tag describing that input. (We can add pre-conditions on the argument here.)
-- For non-void methods, the **@return** tag is used to describe the output (and any post-conditions).
-- You can use basic HTML tags to help format the text.  For example, **<code>main</code>** will format _main_ in code format. Use ```<p>``` to start a new paragraph (with a blank line).
-- The **@author** tag will list the author of the class or method
+- The `@author` tag will list the author of the class or method
+- For methods, each input argument should have an associated `@param` tag describing that input. (We can add pre-conditions on the argument here.)
+- For method, the `@returns` tag is used to describe the output (and any post-conditions).
+- You can use basic HTML tags to help format the text.  For example, `<code>main</code>` will format `main` in code format. Use `<p>` to start a new paragraph (with a blank line).
 
-Now, go back and add javadoc commenting to your Money class.
 
-#### More Reading
+Read the Javadoc Comments and Javadoc Tags sections of the following short tutorial  
 
-http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
-https://www.codeproject.com/Articles/658382/Basic-Javadoc-guide
+[http://students.cs.byu.edu/~cs240ta/fall2012/tutorials/javadoctutorial.html](http://students.cs.byu.edu/~cs240ta/fall2012/tutorials/javadoctutorial.html)
+
+
+Skim through the Oracle documentation for writing Javadoc comments
+[http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)
+
+
+Add some Javadoc tags to your various animal (sub)classes.
+
 
 ---
+---
+
+# 5.  Extra
+Create two new subclasses for each of the `Cat`, `Dog` and `Owl` classes. For each pair of new classes, have one introduce a new noise that is specific to that specific kind of cat, dog or owl.
+
+# 6. Extra Extra
+
+A _noise_ is something that other classes that have no relation to animal might also have. For example, cars makes a noise. It might have been a better idea to instead of having an _abtract_ method called `noise()` in the `Animal` class, we could have had an interface
+
+```java
+public interface Noise{
+  String noise();
+}
+```
+
+and had the `Animal` class implement this instead. Do this. Create the interface (3 lines above) and modify the `Animal` class (the class declaration line; comment out the the abstract `noise()` method).  Everything else should just work the same as before you made this change.
