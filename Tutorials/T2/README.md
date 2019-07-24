@@ -26,7 +26,7 @@ String[] words = {"cat", "wolf", "elk", "elephant", "sparrow"};
 int sum = 0;
 for(int i=0; i<12; i+=1){
   int j = i % words.length;
-  if( words[j].length > 3 ){
+  if( words[j].length() > 3 ){
     sum = sum + 5;
     i = i + 2;
   }else{
