@@ -14,7 +14,7 @@ Your zip file must contain a directory called `comp1406a4` and all of your  `.ja
 ---
 
 
-# 1. Balanced Parentheses 
+# 1. Balanced Parentheses [30 marks]
 
 A stack is a data structure where data is accessed using the LIFO (last in first out) principle.  In this problem, you will use a stack to check whether a string has balanced 
 parentheses `(`, `)` and brackets `{`, `}`, `[`, `]`, or not. 
@@ -66,7 +66,7 @@ The following strings do __not__ have balanced parentheses and brackets
 
 Note: You will receive partial marks if you code only works for parentheses (and not brackets).
 
-# 2. Linked Lists 
+# 2. Linked Lists [40 marks]
 
 Create a concrete `LinkedList` class that extends the provided `ALinkedList` class. You will need to override the `extract()` method in your class. You can use your `main()` method for testing your method (although you do not need to provide a main method).
 
@@ -94,9 +94,20 @@ and `animals` would now be the list
 cat, pig, pip
 ```
 
+The `AlinkedList` class also has a `sort()` method that currently does nothing. Complete this method so that it sorts the current linked list (alphabetically). 
+
+For example, if there was a list called `kids` that consisted of
+```java
+puppy, kitten, cub, leveret, kit, cygnet
+```
+then after calling `kids.sort()`, the list would now be
+```java
+cub, cygnet, kit, kitten, leveret, puppy
+```
+Don't worry about efficiency. Linked lists are not a great data structure if you need to sort the list. The sort method is worth 10 marks (so 10% of the assignment).
 
 
-# 3. Draw a Picture 
+# 3. Draw a Picture [30 marks]
 
 Draw a picture.
 
