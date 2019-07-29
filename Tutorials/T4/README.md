@@ -6,7 +6,7 @@ Practice with Linked Lists, the Java Collections Framework and Exceptions.
 
 ## Submit
 
-Submit a zip file with your `comp1406t4` folder and your `LList`, `TestLL`,  `Owl` classes. For full marks, you must complete everything up to and including problem 3 (Owl). I recommend you try and complete the rest. You will be tested on the javadoc tool and interfaces (either midterm or final exam).
+Submit a zip file with your `comp1406t4` folder and your `LList`, `TestLL`, and `RandomNumbers` classes. For full marks, you must complete Problem 1 (Liked Lists) and Problem 2 (ArryList part). I recommend you try and complete the rest. It will be expected that you can use set, maps and lists (from the JCF). 
 
 
 ---
@@ -20,15 +20,16 @@ Download the `Node`, `LList` and `OutOfBoundsException` classes. Notice how the 
 
 1. implement the `find(String s)` method: returns first k such that s_k = s, return -1 if s is not in the list
 2. implement the `set(int k, String s)` method: sets x_k to be s.
-3. implement the `compareTo` method: lists are compared by their lengths. A longer list is _greater_ than a shorter list. Two lists are _equal_ if their lengths are the same. It does _not_ matter what is in the list.
+3. implement the `compareTo()` method: lists are compared by their lengths. A longer list is _greater_ than a shorter list. Two lists are _equal_ if their lengths are the same. It does _not_ matter what is in the list.
 
 
-Download and modify the `TestLL` program so that it compiles and runs. Add some tests for the `find` method.
+Download and modify the `TestLL` program so that it compiles and runs. Add some tests for the `find()`, `set()` and `compareTo()` methods.
 
 
 ---
 
-# 2. Generics
+# 2. Java Collections Framework (JCF)
+
 All of the classes in the Java Collections Framework (JCF) use generics. As we saw with the `Comparable` interface, one purpose of this is that it lets us specify which type of objects we are dealing with (we can think of the class as having a parameter that specifies a type inside it). Note that when using generics we can only use reference data types. Java does not allow us to use primitive data types with generics (and this is one very good reason we have the primitive wrapper classes). We will cover generics in more detail in class later.
 
 
@@ -59,7 +60,7 @@ ArrayList<Integer> ilist = new ArrayList<Integer>();
 
 1. Modify your `TestLL` program so that for each linked list in the program you have a mirror list that is an ArrayList. Use the same operations (when applicable) to create the ArrayLists.
 
-2. Overload the `same` method to take an `LList` and an `ArrayList<String>` that checks if two lists are the same (the lists have the same strings in the same order). That is, create an `LList` and a shadow `ArrayList` and check that they are the same lists using this `same` method. 
+2. Overload the `same()` method to take an `LList` and an `ArrayList<String>` that checks if two lists are the same (the lists have the same strings in the same order). That is, create an `LList` and a shadow `ArrayList` and check that they are the same lists using this `same()` method. 
 
 
 
@@ -81,11 +82,11 @@ import jave.util.HashSet;
 HashSet<String> set = new HashSet<String>();
 ```
 
-Run the `SetORList` program. Rerun the program several times with different values of `size` (see the main method). Try 1000, 10000, 20000, 50000, etc.
+Run the `SetORList` program. Rerun the program several times with different values of `size` (see the main method). Try using size values of 1000, 10000, 20000, 50000, etc. Note that the program uses command line arguments. 
 
 What can we say about using an ArrayList and using a HashSet?
 
-Modify the `SetORList` to generate a collection of 10 items (Integers for example). Sort the ArrayList (using Collections.sort). How do you sort the data in the set?
+Extra: modify `SetORList` to generate a collection of 10 items (Integers for example). Sort the ArrayList (using Collections.sort). How do you sort the data in the set? You 
 
 
 ## Map
@@ -102,7 +103,7 @@ dictionary.put("cat", "small cute mammal");
 dictionary.put("dog", "small mammal slightly less cute than cat");
 ````
 
-Write a Java method `randomNumbers(int size, int range)` that returns an ArrayList of exactly size unique numbers in between 0 and range (inclusive). The numbers should be generated randomly. Note that a precondition for this method is `range > size`.
+Write a Java method `randomNumbers(int size, int range)` in the `RandomNumbers` class that returns an ArrayList of exactly size unique numbers in between 0 and range (inclusive). The numbers should be generated randomly. Note that a precondition for this method is `range > size`.
 
 Your method should create a Map using using key:values pairs that are `Integer:Integer`.  Each time you generate a random integer (use the `Random` class), you should check if that number is a key in the Map. If it is, increment its value in the Map. Do not add this number to your arraylist to return. If the number is not in the Map, add it to the Map with value 1 and add the number to the arraylist to return.
 
