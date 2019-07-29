@@ -6,7 +6,7 @@ Practice with Linked Lists, the Java Collections Framework and Exceptions.
 
 ## Submit
 
-Submit a zip file with your `comp1406t4` folder and your `LList`, `TestLL`, and `RandomNumbers` classes. For full marks, you must complete Problem 1 (Liked Lists) and Problem 2 (ArryList part). I recommend you try and complete the rest. It will be expected that you can use set, maps and lists (from the JCF). 
+Submit a zip file with your `comp1406t4` folder and your `LList` and `TestLL` classes. For full marks, you must complete Problem 1 (Liked Lists) and Problem 2 (ArryList part). I recommend you try and complete the rest. It will be expected that you can use set, maps and lists (from the JCF). 
 
 
 ---
@@ -60,7 +60,7 @@ ArrayList<Integer> ilist = new ArrayList<Integer>();
 
 1. Modify your `TestLL` program so that for each linked list in the program you have a mirror list that is an ArrayList. Use the same operations (when applicable) to create the ArrayLists.
 
-2. Overload the `same()` method to take an `LList` and an `ArrayList<String>` that checks if two lists are the same (the lists have the same strings in the same order). That is, create an `LList` and a shadow `ArrayList` and check that they are the same lists using this `same()` method. 
+2. Create a `same()` method to take an `LList` and an `ArrayList<String>` that checks if two lists are the same (the lists have the same strings in the same order). That is, create an `LList` and a shadow `ArrayList` and check that they are the same lists using this `same()` method. Note: this is more similar to what a better version of `compareTo()` would have done. 
 
 
 
