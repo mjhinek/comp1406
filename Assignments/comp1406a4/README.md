@@ -1,6 +1,6 @@
 # Assignment 4
 
-## Due  <span style="color:red">Wednesday, July 31th</span> at <span style="color:red">5:30pm</span>
+## Due  <span style="color:red">Wednesday, August 7th</span> at <span style="color:red">5:30pm</span>
 
 ---
 
