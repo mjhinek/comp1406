@@ -18,7 +18,7 @@ Recall that a _list_ is a collection of ordered data `x_0, x_1, x_2, ..., x_n-1`
 
 Download the `Node`, `LList` and `OutOfBoundsException` classes. Notice how the `add` method in `LList` throws an exception. Your task is to complete the `LList` class by completing the following methods as described below and throwing an `OutOfBoundsException` whenever appropriate. Note that our `LList` is hard-coded to store strings. 
 
-1. implement the `find(String s)` method: returns first k such that s_k = s, return -1 if s is not in the list
+1. implement the `find(String s)` method: returns first k such that `x_k = s`, return -1 if s is not in the list
 2. implement the `set(int k, String s)` method: sets x_k to be s.
 3. implement the `compareTo()` method: lists are compared by their lengths. A longer list is _greater_ than a shorter list. Two lists are _equal_ if their lengths are the same. It does _not_ matter what is in the list.
 
