@@ -41,10 +41,16 @@ For our problem the _value_ of a node is the ID number of the student.
 
 Complete the `Gold` class. You will have to complete the `findGold()` method and the `computePerimeter()` methods using recursion. 
 
+A `World` is a 2-dimensional grid of `Location`s. Each location might be a wall or not. If it is not a wall it might have gold and it might not. Each location has four sides to it. You are NOT allowed to move through a wall. A location might be at the edge of the world. You are not allowed to move off of the world (you'll likely throw a null pointer exception).
+
 The `findGold()` method will return the total amount of gold that you can find in the world that is reachable from the specified starting location.
 
-
 The `computePerimeter()` method description is coming...
+
+The _perimieter_ is defined as the sum of all sides of each location that is reachable in a world (from some starting location) that has a wall on the other side of it. For example, 
+
+
+
 
 For this problem, I would suggest that you extend the provided `Location` class to add state and potentially behaviour as you see fit. In your code you can use your child class. Be sure that you do NOT modify the `World` and `Location` classes though. We will test your code by simply calling the two methods in the `Gold` class with different worlds and starting points.  
 
