@@ -21,7 +21,7 @@ The `add()` method should be randomized. For example, starting from an empty tre
 ```
 student 1
      \
-    student 2
+   student 2
 ```
 
 50% of the time, and look like 
@@ -34,7 +34,7 @@ student 2
 
 50% of the time.
 
-
+Do not change any other method in the class.
 
 ---
 
