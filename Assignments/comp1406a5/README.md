@@ -49,7 +49,7 @@ The `computePerimeter()` method description is coming...
 
 The _perimieter_ is defined as the sum of all sides of each location that is reachable in a world (from some starting location) that has a wall on the other side of it. For example, 
 
-![world](pix4/png?raw=true "World1")
+![world](pix4.png?raw=true "World1")
 
 
 For this problem, I would suggest that you extend the provided `Location` class to add state and potentially behaviour as you see fit. In your code you can use your child class. Be sure that you do NOT modify the `World` and `Location` classes though. We will test your code by simply calling the two methods in the `Gold` class with different worlds and starting points.  
