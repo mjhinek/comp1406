@@ -19,10 +19,26 @@ Your zip file must contain a directory called `comp1406a5` and all of your  `.ja
 Write a class called `StudentBST` that extends `StudentTree` (from Tutorial 5). In this new class, you will _override_ the `find(int id)` method to be more efficient (you can assume the tree is a valid binary search tree based on ID values). You will _override_ the `add()`
 to add a student in the proper place so that the resulting tree is a valid binary search tree.
 
+When you override `add()`, if a student with the given ID is already in the tree, your method should do nothing and simply return `this`. 
+
+You will also add a new method
+
+```java
+public boolean valid()
+```
+
+that checks whether this StudentBST is a valid binary search tree or not.
+
+Note: recall that a binary search tree is a binary tree that also satisfies the **binary search tree property**. The binary search tree property is as follows:
+
+For every node `n` in the tree, 
+1) all nodes in the left subtree of `n` have value less than the value of `n`
+2) all nodes in the right subtree of `n` have values greater then the value of `n`
+
+For our problem the _value_ of a node is the ID number of the student.  
 
 # 2. Gold [50 marks]
 
-coming...
 
 # Submission Recap
 
