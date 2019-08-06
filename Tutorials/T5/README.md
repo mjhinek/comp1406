@@ -7,7 +7,7 @@ Practice with Binary Trees and using Exceptions
 
 ## Submit
 
-Submit a zip file with your `comp1406t5` folder and your `StudentTree` and `TestLL` classes. 
+Submit a zip file with your `comp1406t5` folder and your `StudentTree` and `Frequent` classes. 
 
 ---
 
@@ -52,7 +52,7 @@ Look at the API for the `PrintWriter` class. Notice that we can print to a file 
 
 [https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html](https://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html)
 
-Using the `ReadFile` and `WriteFile` classes as a starting point, write a program that reads all the contents of a file (the provided text.txt, for example) and finds the 10 most frequently used words.
+Using the `ReadFile` and `WriteFile` classes as a starting point, write a program in a file called `Frequent.java`, that reads all the contents of a file (the provided text.txt, for example) and finds the 10 most frequently used words.
 
 Your program will read every line in the input file and record each _word_ in the line. A word is a sequence of consecutive non-whitespace characters.
 
