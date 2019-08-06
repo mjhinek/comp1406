@@ -39,6 +39,14 @@ For our problem the _value_ of a node is the ID number of the student.
 
 # 2. Gold [50 marks]
 
+Complete the `Gold` class. You will have to complete the `findGold()` method and the `computePerimeter()` methods using recursion. 
+
+The `findGold()` method will return the total amount of gold that you can find in the world that is reachable from the specified starting location.
+
+
+The `computePerimeter()` method description is coming...
+
+For this problem, I would suggest that you extend the provided `Location` class to add state and potentially behaviour as you see fit. In your code you can use your child class. Be sure that you do NOT modify the `World` and `Location` classes though. We will test your code by simply calling the two methods in the `Gold` class with different worlds and starting points.  
 
 # Submission Recap
 
