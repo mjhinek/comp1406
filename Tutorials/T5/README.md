@@ -63,7 +63,7 @@ Note that the `split()` method in the `String` class will break up a string into
  String[] words = s.split("\\s+");
 ```
 
-Here, the input `"\\\\s+"` tell `split()` to split the string `s` by whitespace characters.
+Here, the input `"\\s+"` tell `split()` to split the string `s` by whitespace characters.
 
 Use a dictionary (`HashMap`) to store the words. The keys should be your words and the values should be the frequency count. Each time you see a word that you have already seen, you will need to update the value for that work (that key).
 
