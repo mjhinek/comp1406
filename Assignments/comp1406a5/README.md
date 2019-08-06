@@ -33,7 +33,7 @@ Note: recall that a binary search tree is a binary tree that also satisfies the 
 
 For every node `n` in the tree, 
 1) all nodes in the left subtree of `n` have value less than the value of `n`
-2) all nodes in the right subtree of `n` have values greater then the value of `n`
+2) all nodes in the right subtree of `n` have values greater than the value of `n`
 
 For our problem the _value_ of a node is the ID number of the student.  
 
