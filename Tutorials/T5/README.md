@@ -79,7 +79,7 @@ Note: Java provided a `Map.Entry` interface to help do this same thing (in place
 
 ---
 
-3. Extra 
+# 3. Extra 
 
 Notice that "cat.", "cat,", "cat!" and "cat" will all appear as different words in your dictionary instead of one "cat" (which should be the case). Modify your code from the previous problem to strip trailing punctuation from all the words before you add them to the dictionary. You should remove things like ",", ";", "!", "\'", "?", etc.
 
