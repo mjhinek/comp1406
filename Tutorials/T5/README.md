@@ -19,17 +19,15 @@ Complete the two `find()` methods and the `add()` method in the `StudentTree` cl
 The `add()` method should be randomized. For example, starting from an empty tree and adding two students (student 1 first, then student 2), the resulting tree should look like
 
 ```
-|
-+-- student 1
-    |  
-    +-- student 2
+└── student 1
+    └── student 2
 ```
 
 50% of the time, and look like 
 
 ```
-|   ┌── student 1
-+-- student 2 
+│   ┌── student 1
+└── student 2 
 ```
 
 50% of the time.
