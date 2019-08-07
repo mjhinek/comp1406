@@ -21,7 +21,9 @@ to add a student in the proper place so that the resulting tree is a valid binar
 
 When you override `add()`, if a student with the given ID is already in the tree, your method should do nothing and simply return `this`. 
 
-You **must** have a zero argument constructor that creates an empty binary search tree. All testing will rely on this constructor.
+When you override `find()`, if the search fails you should return `null`. The `find(int id)` method **must** be efficient. That is, it must exploit the fact that the tre is a _binary search tree_. The `find(String name)` will essentially be the same as the one you mad for Tutorial 5. 
+
+You **must** have a zero argument constructor that creates an empty binary search tree. All testing will rely on this constructor. Your grade will be zero for this problem if you do not have this constructor.
 
 You will also add a new method
 
