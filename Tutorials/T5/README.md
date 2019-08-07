@@ -28,8 +28,7 @@ The `add()` method should be randomized. For example, starting from an empty tre
 50% of the time, and look like 
 
 ```
-|   +-- student 1
-|   |
+|   ┌── student 1
 +-- student 2 
 ```
 
