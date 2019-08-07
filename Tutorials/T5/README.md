@@ -32,7 +32,7 @@ The `add()` method should be randomized. For example, starting from an empty tre
 
 50% of the time.
 
-Do not change any other method in the class
+Do not change any other method in the class. Remember to update the `size` of the tree when adding.
 
 ---
 
