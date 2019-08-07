@@ -2,6 +2,10 @@ package comp1406t5;
 
 
 public class StudentTree{
+	// a student to return when a search fails
+	protected static final Student NOT_FOUND = new Student("Not found", -3, 0.0);
+	
+	
 	protected Node root;
 	protected int  size;
 	
