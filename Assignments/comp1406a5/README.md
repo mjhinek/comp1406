@@ -49,7 +49,7 @@ A `World` is a 2-dimensional grid of `Location`s. Each location might be a wall 
 
 The `findGold()` method will return the total amount of gold that you can find in the world that is reachable from the specified starting location.
 
-The `computePerimeter()` method description is coming...
+The `computePerimeter()` method computes the perimater of the reachable world from the specified loction. 
 
 The _perimieter_ is defined as the sum of all sides of each location that is reachable in a world (from some starting location) that has a wall on the other side of it. In the following example, white cells denote walls. The perimeter is shown for each(if calculated from any starting location that is not a wall (in black)
 
