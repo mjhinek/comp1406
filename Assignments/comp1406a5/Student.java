@@ -18,6 +18,6 @@ public class Student{
 	
 	@Override
 	public String toString(){
-		return name + ":" + id + ":" + average;
+		return name + ":" + id ;
 	}
 }
