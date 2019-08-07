@@ -7,7 +7,7 @@ import java.io.FileReader;
 
 public class ReadFile {
 
-    public static String filename = "input.txt";
+    public static String filename = "comp1406t5\\input.txt";
 
     public static void main(String args[]) {
         try {
