@@ -21,6 +21,8 @@ to add a student in the proper place so that the resulting tree is a valid binar
 
 When you override `add()`, if a student with the given ID is already in the tree, your method should do nothing and simply return `this`. 
 
+You **must** have a zero argument constructor that creates an empty binary search tree. All testing will rely on this constructor.
+
 You will also add a new method
 
 ```java
