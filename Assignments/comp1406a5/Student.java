@@ -1,4 +1,4 @@
-package comp1406t5;
+package comp1406a5;
 
 public class Student{
 	protected String name;
