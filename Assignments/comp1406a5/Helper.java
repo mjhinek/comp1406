@@ -26,7 +26,17 @@ public class Helper{
 				}
 			}
 		}
-		return world;
+		for(int row=0; row<rows; row+=1){
+			for(int col=0; col<cols; col+=1){
+				if( !world.locations[row][col].isWall() && world.locations[row][col].getGold() == 0 ){
+					world.locations[row][col].setStart();
+					return world;
+				}
+			}
+		}
+		// if we get this far the world generator failed to find a place to put the start location
+		// either try a bigger world or make the probability of gold closer to 0.0
+		return null;
 	}
 
 
