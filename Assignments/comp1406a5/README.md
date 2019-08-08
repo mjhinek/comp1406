@@ -51,13 +51,13 @@ The `findGold()` method will return the total amount of gold that you can find i
 
 The `computePerimeter()` method computes the perimater of the reachable world from the specified loction. 
 
-The _perimieter_ is defined as the sum of all sides of each location that is reachable in a world (from some starting location) that has a wall on the other side of it. In the following example, white cells denote walls. The perimeter is shown for each(if calculated from any starting location that is not a wall (in black)
+The _perimieter_ is defined as the sum of all sides of each location that is reachable in a world (from some starting location) that has a wall on the other side of it. You can think of this as the total number of walls that you could touch if you were in the world and could walk around starting from the specified start location. In the following example, white cells denote walls. The perimeter is shown for each(if calculated from any starting location that is not a wall (in black)
 
 ![world](pix4.png?raw=true "World1")
 ![world](pix5.png?raw=true "World3")
 ![world](pix6.png?raw=true "World2")
 
-For this problem, I would suggest that you extend the provided `Location` class to add state and potentially behaviour as you see fit. In your code you can use your child class. Be sure that you do NOT modify the `World` and `Location` classes though. We will test your code by simply calling the two methods in the `Gold` class with different worlds and starting points.  
+For this problem, I would suggest that you modify the `MyLocation` class (do NOT change the two provided constructors) to add state and potentially behaviour as you see fit. Be sure that you do NOT modify the `World` and `Location` classes though. We will test your code by simply calling the two methods in the `Gold` class with different worlds and starting points.  
 
 # Submission Recap
 
@@ -65,6 +65,7 @@ A complete assignment will consist of a single file `comp1406a5.zip` that has a 
 
 ```java
 StudentBST.java
+MyLocation.java
 Gold.java
 ```
 
