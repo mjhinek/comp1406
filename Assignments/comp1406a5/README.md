@@ -57,6 +57,38 @@ The _perimieter_ is defined as the sum of all sides of each location that is rea
 ![world](pix5.png?raw=true "World3")
 ![world](pix6.png?raw=true "World2")
 
+
+Here are three example worlds (the output of the `toString()`). Here, `s` denotes the starting location, `g` denotes gold and `#` denotes a wall. The border of the world is also shown but that is NOT a wall.
+
+```
++---+
+|s  |
+| g |
+|   |
++---+
+
++---+
+|s#g|
+|###|
+|g#g|
++---+
+
++---+
+|s# |
+|   |
+| # |
++---+
+```
+
+The output for the two methods for these three examples should be 
+
+```
+example | findGold() | computePerimeter()
+  1     |    >0      |        0   
+  2     |     0      |        2
+  3     |     0      |        6
+```
+
 For this problem, I would suggest that you modify the `MyLocation` class (do NOT change the two provided constructors) to add state and potentially behaviour as you see fit. Be sure that you do NOT modify the `World` and `Location` classes though. We will test your code by simply calling the two methods in the `Gold` class with different worlds and starting points.  
 
 # Submission Recap
