@@ -5,6 +5,7 @@ public class World{
 	protected Location[][] locations;
 	protected int rows;
 	protected int cols;
+	protected Location start;
 
 	public World(int rows, int cols){
 		this.locations = new Location[rows][cols];
@@ -16,7 +17,10 @@ public class World{
 		return this.locations[row][col];
 	}
 
-
+	public World setStart(int row, int column){
+		locations[row][column].setStart();
+		return this;
+	}
 
 
   /** Clear all locations in the world; setting all settable state to 'zero' */
@@ -35,7 +39,7 @@ public class World{
 	public static final String WALL = "#";     // "\u2588";
 	public static final String EMPTY = " ";    //
   public static final String GOLD = "g";     // gold
-
+	public static final String START = "s";    // start
 	@Override
 	public String toString(){
 		String world = "+";
@@ -46,7 +50,12 @@ public class World{
 		for(int r=0; r<rows; r+=1){
 			world += "|";
 			for(int c=0; c<cols; c+=1){
-					world += getLocation(r,c).isWall() ? WALL : (getLocation(r,c).getGold() > 0 ? GOLD : EMPTY);
+				Location room = getLocation(r,c);
+				if( room.isWall() ) world += WALL;
+				else if( room.isStart()) world += START;
+				else if( room.getGold() > 0 ) world += GOLD;
+				else world += EMPTY;
+				//	world += getLocation(r,c).isWall() ? WALL : (getLocation(r,c).getGold() > 0 ? GOLD : EMPTY);
 			}
 			world += "|\n";
 		}
