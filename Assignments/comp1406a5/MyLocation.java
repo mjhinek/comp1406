@@ -10,7 +10,7 @@ public class MyLocation extends Location{
 	public MyLocation(int row, int col){ // makes a wall
 		super(row, col);
 	}
-	public Location(int row, int col, int gold){// not a wall
+	public MyLocation(int row, int col, int gold){// not a wall
 		super(row, col, gold);
 	}
   
