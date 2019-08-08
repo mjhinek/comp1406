@@ -29,7 +29,7 @@ public class Helper{
 		for(int row=0; row<rows; row+=1){
 			for(int col=0; col<cols; col+=1){
 				if( !world.locations[row][col].isWall() && world.locations[row][col].getGold() == 0 ){
-					world.start = world.locations[row][col].setStart();
+					world.setStart(row,col);
 					return world;
 				}
 			}
