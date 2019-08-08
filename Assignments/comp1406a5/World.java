@@ -2,18 +2,18 @@ package comp1406a5;
 
 public class World{
 
-	protected Location[][] locations;
+	protected MyLocation[][] locations;
 	protected int rows;
 	protected int cols;
-	protected Location start;
+	protected MyLocation start;
 
 	public World(int rows, int cols){
-		this.locations = new Location[rows][cols];
+		this.locations = new MyLocation[rows][cols];
 		this.rows = rows;
 		this.cols = cols;
 	}
 
-	public Location getLocation(int row, int col){
+	public MyLocation getLocation(int row, int col){
 		return this.locations[row][col];
 	}
 
@@ -50,12 +50,12 @@ public class World{
 		for(int r=0; r<rows; r+=1){
 			world += "|";
 			for(int c=0; c<cols; c+=1){
-				Location room = getLocation(r,c);
+				MyLocation room = getMyLocation(r,c);
 				if( room.isWall() ) world += WALL;
 				else if( room.isStart()) world += START;
 				else if( room.getGold() > 0 ) world += GOLD;
 				else world += EMPTY;
-				//	world += getLocation(r,c).isWall() ? WALL : (getLocation(r,c).getGold() > 0 ? GOLD : EMPTY);
+				//	world += getMyLocation(r,c).isWall() ? WALL : (getMyLocation(r,c).getGold() > 0 ? GOLD : EMPTY);
 			}
 			world += "|\n";
 		}
