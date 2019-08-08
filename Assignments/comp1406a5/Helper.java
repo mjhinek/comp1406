@@ -20,9 +20,9 @@ public class Helper{
 			for(int col=0; col<cols; col+=1){
 				boolean wall = Math.random() < probWall;
 				if(wall){
-					world.locations[row][col] = new Location(row, col);
+					world.locations[row][col] = new MyLocation(row, col);
 				}else{
-					world.locations[row][col] = new Location(row, col, Math.random()<probGold ? 10 : 0 );
+					world.locations[row][col] = new MyLocation(row, col, Math.random()<probGold ? 10 : 0 );
 				}
 			}
 		}
