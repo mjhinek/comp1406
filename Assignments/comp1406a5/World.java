@@ -50,7 +50,7 @@ public class World{
 		for(int r=0; r<rows; r+=1){
 			world += "|";
 			for(int c=0; c<cols; c+=1){
-				MyLocation room = getMyLocation(r,c);
+				MyLocation room = getLocation(r,c);
 				if( room.isWall() ) world += WALL;
 				else if( room.isStart()) world += START;
 				else if( room.getGold() > 0 ) world += GOLD;
