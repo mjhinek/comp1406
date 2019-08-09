@@ -19,6 +19,7 @@ public class World{
 
 	public World setStart(int row, int column){
 		locations[row][column].setStart();
+		start = locations[row][column];       // missing line!
 		return this;
 	}
 
