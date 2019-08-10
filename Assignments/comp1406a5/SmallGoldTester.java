@@ -19,7 +19,7 @@ public class SmallGoldTester{
     int row = (int)(Math.random()*2)+2;
     int col = (int)(Math.random()*2)+2;
     int gold = (int)(Math.random()*10)+2;
-    world.locations[row][col] = new MyLocation(2,4,gold);
+    world.locations[row][col] = new MyLocation(row,col,gold);
     // set the start
     world.locations[0][0].setStart();
     world.setStart(0,0);
